@@ -1,1 +1,9 @@
-<p>products-list works!</p>
+<mat-nav-list>
+    <h3 matSubheader>This is the listview</h3>
+    <a mat-list-item *ngFor="let product of products">
+        <span matLine>{{product.name}}</span>
+        <button mat-icon-button (click)="deleteProduct(product.id)">
+            <mat-icon color="warn">delete</mat-icon>
+        </button>
+    </a>
+</mat-nav-list>
