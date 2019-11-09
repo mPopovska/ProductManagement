@@ -1,1 +1,13 @@
-<p>add-customer works!</p>
+<div class="container example-container">
+    <form [formGroup]="customerForm" (ngSubmit)="addCustomer()">
+        <mat-form-field>
+            <input matInput placeholder="Name" id="name" formControlName="name" required>
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+            <input matInput placeholder="Email" id="email" formControlName="email" required pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+        </mat-form-field>
+        <br />
+        <button mat-raised-button type="submit" color="primary" >Add Customer</button>
+    </form>
+</div>

@@ -1,0 +1,9 @@
+<mat-nav-list>
+    <h3 matSubheader>Customers List</h3>
+    <a mat-list-item *ngFor="let customer of customers">
+        <span matLine>{{customer.name}}</span>
+        <button mat-icon-button (click)="deleteCustomer(customer.id)">
+            <mat-icon>details</mat-icon>
+        </button>
+    </a>
+</mat-nav-list>

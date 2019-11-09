@@ -1,8 +1,8 @@
-import { ProductsModule } from '../../products/products.module';
+import { Product } from '../../products/models/productModels';
 
 export class Customer {
     id: string;
     name: string = "";
     email: string = "";
-    purchasedProducts: Array<ProductsModule> = [];
+    purchasedProducts: Array<Product> = [];
 }
