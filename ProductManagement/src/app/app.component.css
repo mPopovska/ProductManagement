@@ -1,0 +1,143 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+    padding: 16px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  .example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .disabled {
+    pointer-events:none;
+    opacity:0.6;
+}
+
+.ogi-submenu ul span {
+    padding-left: 0rem !important;
+}
+
+.ogi-sidemenu .clicked{
+  background:#eaecec;
+  color: grey;
+
+
+}
+
+.ogi-sidemenu ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.ogi-sidemenu-listitem{
+  padding: 2.4rem;
+  width: 6.6rem;
+  overflow: hidden;
+  transition:all 0.1s ease-in-out;
+  color:#fff;
+
+}
+/* hover and clicked */
+.ogi-sidemenu-listitem:hover{
+  cursor: pointer;
+  background:#eaecec;
+  color: grey;
+}
+
+
+.hover .ogi-sidemenu-listitem{
+  width:25rem;
+}
+.ogi-sidemenu-listitem:last-child{
+  border-bottom: none;
+}
+
+/* image */
+.ogi-sidemenu-listitem img{
+display: inline-block;
+height: 3.2rem;
+min-width: 2.8rem;
+}
+
+.hover .ogi-sidemenu-listitem img{
+  height: 3.2rem;
+  min-width: 2.8rem;
+}
+
+.ogi-sidemenu-listitem span{
+  padding-left: 2.4rem; 
+  display: inline-block;
+  min-width: 17rem;
+  white-space: nowrap;
+}
+
+.ogi-sidemenu-list{
+  list-style: none;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background: blue;
+  min-height: 60rem;
+}
+
+.example-header-image {
+  background-color: gray;
+  background-size: cover;
+  border-radius: 40%;
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: 900;
+    line-height: 4.5rem;
+    color: #fff;
+}

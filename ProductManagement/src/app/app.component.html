@@ -1,0 +1,23 @@
+<div *ngIf="isLoggedIn()" #mySidenav id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+    <mat-card>
+    <mat-card-header>
+        <div mat-card-avatar class="example-header-image">A</div>
+        <mat-card-title>Admin Admin</mat-card-title>
+        <mat-card-subtitle>Admin user</mat-card-subtitle>
+    </mat-card-header>
+</mat-card>
+    <a (click)="navigate('/products')">Products</a>
+    <a (click)="navigate('/add-product')">Add Product</a>
+    <a (click)="navigate('/customers')">Customers</a>
+    <a (click)="navigate('/add-customer')">Add Customer</a>
+</div>
+
+<div #main id="main">
+    <span *ngIf="isLoggedIn()" style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776;</span>
+    <div class="container">
+        <!-- <div class="row"> -->
+        <router-outlet></router-outlet>
+        <!-- </div> -->
+    </div>
+</div>
