@@ -8,7 +8,7 @@ import * as uuid from 'uuid';
 })
 export class ProductsService {
 
-  private dummyData = [{ id: Date.now().toString(), name: "Tomato1", price: 11 }, { id: (Date.now() + 1).toString(), name: "Tomato2", price: 12 }, { id: (Date.now() + 2).toString(), name: "Tomatooo", price: 13 }];
+  private dummyData = [{ id: Date.now().toString(), name: "OnePlus 7T Pro", price: 750 }, { id: (Date.now() + 1).toString(), name: "Macbook Ait", price: 1200 }, { id: (Date.now() + 2).toString(), name: "Samsung 4K", price: 800 }];
   productList: BehaviorSubject<Array<Product>> = new BehaviorSubject([]);
   // currentProduct = this.product.asObservable();
 
