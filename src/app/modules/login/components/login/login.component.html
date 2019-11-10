@@ -16,13 +16,12 @@
                     <td>
                         <mat-form-field class="login-full-width">
                             <input matInput placeholder="Password" [(ngModel)]="password" type="password"
-                                name="password" (keydown.enter)="focusableSubmit.click()" required>
+                                name="password" required>
                         </mat-form-field>
                     </td>
                 </tr>
             </table>
         </form>
-        <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
     </mat-card-content>
     <mat-card-actions>
         <button #focusableSubmit mat-raised-button type="button" (click)="login()" color="primary">Login</button>

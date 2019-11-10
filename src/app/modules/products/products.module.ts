@@ -22,40 +22,6 @@ import { DialogComponent } from './components/dialog/dialog.component';
 import {MatDialogModule, MatDialog, MatDialogRef} from '@angular/material/dialog';
 
 
-@NgModule({
-  imports: [
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    MatIconModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatListModule,
-    MatSelectModule,
-    MatTabsModule
-  ],
-  exports: [
-    MatButtonModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    MatIconModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatListModule,
-    MatSelectModule,
-    MatTabsModule,
-    MatDialogModule
-  ],
-  declarations: [
-  DecimalPlacesDirective,
-  DialogComponent],
-  schemas: [
-    CUSTOM_ELEMENTS_SCHEMA,
-  ]
-}) export class MaterialModule { };
-
 
 @NgModule({
   declarations: [ProductsWrapperComponent, ProductsGridComponent, ProductsListComponent, AddProductComponent, DecimalPlacesDirective, DialogComponent],
