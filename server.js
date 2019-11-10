@@ -11,7 +11,7 @@ app.use(express.static(__dirname+'/dist/ProductManagement'));
 app.listen(process.env.PORT || 8080);
 
 app.get('/*', function(req,res) {
-    res.sendFile(path.join(__dirname+'/index.html'));
+    res.sendFile(path.join(__dirname+'/dist/ProductManagement/index.html'));
 });
 
 console.log("PAtekata:",__dirname, path.dirname("./"));
