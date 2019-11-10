@@ -32,6 +32,7 @@
     "@ngrx/store-devtools": "^8.4.0",
     "angular-font-awesome": "^3.1.2",
     "angular-material": "^1.1.20",
+    "express": "^4.17.1",
     "font-awesome": "^4.7.0",
     "ng-bootstrap": "^1.6.3",
     "rxjs": "^6.4.0",
