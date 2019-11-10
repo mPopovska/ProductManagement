@@ -10,10 +10,13 @@ import { User } from './modules/login/models/userModel';
 export class AppComponent implements OnInit {
   title = 'ProductManagement';
   needsRedirect = true;
-  loggedUser: User = new User();
+  loggedUser: User = null;
 
   ngOnInit(): void {
-    this.loggedUser.mapToUser(JSON.parse(sessionStorage["userDetails"]));
+    if(!!sessionStorage["userDetails"]) {
+      this.loggedUser = new User();
+      this.loggedUser.mapToUser(JSON.parse(sessionStorage["userDetails"]));
+    }
   }
 
 
@@ -35,6 +38,10 @@ export class AppComponent implements OnInit {
   
   isLoggedIn(): boolean {
 
+    if(!this.loggedUser && !!sessionStorage["userDetails"]) {
+      this.loggedUser = new User();
+      this.loggedUser.mapToUser(JSON.parse(sessionStorage["userDetails"]));
+    }
 
     // let isUserLoggedIn = !!localStorage["user"];
     let isUserLoggedIn = !!sessionStorage["user"];
@@ -77,6 +84,7 @@ export class AppComponent implements OnInit {
 
   logout() {
     sessionStorage.removeItem("user");
+    sessionStorage.removeItem("userDetails");
   }
 }
 
