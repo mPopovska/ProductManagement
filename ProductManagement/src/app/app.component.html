@@ -1,16 +1,21 @@
-<div *ngIf="isLoggedIn()" #mySidenav id="mySidenav" class="sidenav">
+<div *ngIf="isLoggedIn()" #sidenav id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
     <mat-card>
-    <mat-card-header>
-        <div mat-card-avatar class="example-header-image">A</div>
-        <mat-card-title>Admin Admin</mat-card-title>
-        <mat-card-subtitle>Admin user</mat-card-subtitle>
-    </mat-card-header>
-</mat-card>
-    <a (click)="navigate('/products')">Products</a>
-    <a (click)="navigate('/add-product')">Add Product</a>
-    <a (click)="navigate('/customers')">Customers</a>
-    <a (click)="navigate('/add-customer')">Add Customer</a>
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image">{{loggedUser.initials}}</div>
+            <mat-card-title>{{loggedUser.name}}</mat-card-title>
+            <mat-card-subtitle>{{loggedUser.role}}</mat-card-subtitle>
+            <div mat-button class="sub-menu" [matMenuTriggerFor]="afterMenu">...</div>
+            <mat-menu #afterMenu="matMenu" xPosition="after">
+                <button mat-menu-item (click)="logout()">Logout</button>
+            </mat-menu>
+
+        </mat-card-header>
+    </mat-card>
+    <a class="menu-nav-item" (click)="navigate('/products')">Products</a>
+    <a class="menu-nav-item" (click)="navigate('/add-product')">Add Product</a>
+    <a class="menu-nav-item" (click)="navigate('/customers')">Customers</a>
+    <a class="menu-nav-item" (click)="navigate('/add-customer')">Add Customer</a>
 </div>
 
 <div #main id="main">

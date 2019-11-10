@@ -24,8 +24,12 @@ export class LoginComponent implements OnInit {
 
   login(): void {
     if (this.username == 'admin' && Md5.hashStr(this.password) == this.passwordToCompare) {
-      localStorage["user"] = true;
+      //localStorage["user"] = true;
       sessionStorage["user"] = true;
+      sessionStorage["userDetails"] = JSON.stringify({
+        name: "Admin Admin",
+        role: "admin"
+      });
       this.router.navigate(["/"]);
     } else {
       this.username = "";

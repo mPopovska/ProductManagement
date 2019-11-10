@@ -9,20 +9,11 @@ import { ProductsModule } from './modules/products/products.module';
 import { CustomersModule } from './modules/customers/customers.module';
 import { LoginModule } from './modules/login/login.module';
 import { StoreModule } from '@ngrx/store';
-import { rootReducer, INITIAL_STATE } from './modules/redux-store/store';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardModule } from './modules/dashboard/dashboard.module';
 import { MatCardModule } from '@angular/material';
-
-
-const initialState = INITIAL_STATE;
-
-export function getInitialState() {
-  return initialState;
-}
-
-
+import { MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -30,7 +21,6 @@ export function getInitialState() {
     AppComponent
   ],
   imports: [
-    StoreModule.forRoot(rootReducer, { initialState: getInitialState }),
     BrowserModule,
     AppRoutingModule,
     NgbModule,
@@ -40,7 +30,8 @@ export function getInitialState() {
     LoginModule,
     DashboardModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    MatMenuModule
   ],
   exports: [
 
