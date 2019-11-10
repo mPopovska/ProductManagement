@@ -16,7 +16,7 @@
                     <td>
                         <mat-form-field class="login-full-width">
                             <input matInput placeholder="Password" [(ngModel)]="password" type="password"
-                                name="password" required>
+                                name="password" (keydown.enter)="onEnterClick()" required>
                         </mat-form-field>
                     </td>
                 </tr>

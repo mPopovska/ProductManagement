@@ -37,4 +37,8 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  onEnterClick() {
+    this.focusableSubmit._elementRef.nativeElement.click();
+  }
+
 }
